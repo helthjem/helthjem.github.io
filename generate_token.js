@@ -1,6 +1,5 @@
 
 
-
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 
@@ -69,16 +68,18 @@ function submitForm(e, form){
             document.getElementById("alt3").innerHTML = data2.freightProducts[0].servicePoints[2].servicePointName;
             //document.getElementById("alt2").innerHTML = data2.productName;
             //document.getElementById("alt3").innerHTML = data2.productName;
+
             console.log(data2)
           })
       } else {
         console.log('HELTHJEM_EXPRESS')
-        document.getElementById('alt1').remove();
-        document.getElementById('alt2').remove();
-        document.getElementById('alt3').remove();
         document.getElementById("address").innerHTML = "For " + form.formAddress.value + " is ";
         document.getElementById("name").innerHTML = data.productName;
+        document.getElementById("alt1").innerHTML = "";
+        document.getElementById("alt2").innerHTML = "";
+        document.getElementById("alt3").innerHTML = "";
       }
+
     })
   .catch(function(err) {
       //Failure
