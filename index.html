@@ -31,6 +31,8 @@
               </div>
                 <button class="button button2" name="formSubmit" type="submit" value="Submit Me!">Submit</button>
             </form>
+            <hr>
+            <a href = "map.html"> Map of closest service points</a>
             </div>
             <div class="center">
            <div class="parent">
@@ -40,9 +42,9 @@
                 <h2 >Best available option: </h2>
                 <h2 id="address"></h2>
                 <h2 id="name"></h2>
-                <h2 id="alt1" class="classname"></h2>
-                <h2 id="alt2" class="classname"></h2>
-                <h2 id="alt3" class="classname"></h2>
+                <li id="alt1" class="classname" style="display: none"></li>
+                <li id="alt2" class="classname" style="display: none"></li>
+                <li id="alt3" class="classname" style="display: none"></li>
 
             </div>
           </div>
@@ -52,4 +54,7 @@
 
 
   <script src="generate_token.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
 </body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXxjPNqAMxBBad2iInHIgzRismjOXDKJs&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="map.js"></script>
+  </head>
+  <body>
+    <form method="post" onsubmit="submitForm(event, this)">
+    <label>Address:</label>
+        <input name="formAddress" type="text" placeholder="Lille Bislett 2">
+        <div class="eye">
+    <label>Zip::</label>
+        <input name="formZip"type="text" placeholder="0170" class="pass">
+    <label>City::</label>
+        <input name="formPostal" type="text" placeholder="Oslo"/>
+      </div>
+        <button class="button button2" name="formSubmit" type="submit" value="Submit Me!">Submit</button>
+    </form>
+    <div id="map"></div>
+  </body>
+</html>
